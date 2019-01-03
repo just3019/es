@@ -25,11 +25,11 @@ public class EsApplicationTests {
         System.out.println("1=====================");
         userRepository.findAll().forEach(a -> System.out.println(a.toString()));
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 500; i++) {
             User user = new User();
             user.id = i;
-            user.name = "test2";
-            user.age = 11;
+            user.name = "test" + i;
+            user.age = i;
             userRepository.save(user);
         }
 
